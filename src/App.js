@@ -2,21 +2,23 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Body from "./components/Body";
+import Body from "./pages/Body";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Error from "./components/Error";
+import Error from "./pages/Error";
 import { Outlet } from "react-router-dom";
 import RestaurantPage from "./components/RestaurantMenu";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
-import Cart from "./components/cart";
+import Cart from "./pages/Cart";
 
 const App = () => {
   return (
     <Provider store={appStore}>
-      <div className="app">
+      <div className="flex flex-col min-h-screen">
         <Header />
-        <Outlet />
+        <div className="flex-grow">
+          <Outlet />
+        </div>
         <Footer />
       </div>
     </Provider>

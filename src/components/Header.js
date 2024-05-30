@@ -1,30 +1,39 @@
 import { LOGO_URL } from "../utils/constants";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { FaShoppingCart } from "react-icons/fa";
+import { GoHomeFill } from "react-icons/go";
 
 const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
+  const location = useLocation();
 
   return (
-    <div className="flex justify-between shadow-md  bg-pink-200 sm:bg-yellow-200 lg:bg-green-200 ">
+    <div className="fixed top-0 left-0 w-full z-50 flex justify-around shadow-md bg-pink-200 sm:bg-yellow-200 lg:bg-white ">
       <div>
         <Link to="/">
-          <img src={LOGO_URL} alt="logo" className="w-40 p-4" />
+          <img src={LOGO_URL} alt="logo" className="w-32" />
         </Link>
       </div>
-      <ul className="flex items-center p-4 m-4">
-        <li className="px-4">
-          <Link to="/" className="text-blue-700 underline ">
-            {" "}
-            Home{" "}
+      <ul className="flex items-center justify-center m-4">
+        {location.pathname === "/cart" && (
+          <Link to="/">
+            <li className="px-4 font-bold text-xl text-black flex items-end gap-1">
+              <GoHomeFill size={35} color="#EA580C" />
+              Home
+            </li>
           </Link>
-        </li>
-
-        {/* reading cartdata */}
-        {/* whenver my stoe is gettign modified , it is changing */}
-        <li className="px-4 font-bold text-xl">
-          <Link to="/cart"> Cart - ({cartItems.length} items)</Link>
-        </li>
+        )}
+        <Link to="/cart">
+          <li className="px-4 font-bold text-xl flex items-end">
+            <div className="flex flex-col items-center justify-center">
+              <div className="rounded-full w-7 h-7 p-2 text-base ml-7 flex items-center justify-center -mb-3 bg-white z-10 text-black border border-orange-600 font-normal">
+                {cartItems.length}
+              </div>
+              <FaShoppingCart size={35} color="#EA580C" />
+            </div>
+          </li>
+        </Link>
       </ul>
     </div>
   );

@@ -105,3 +105,18 @@ imp hooks
 ![Alt text](./assets/images/ss6.png)
 ![Alt text](./assets/images/ss7.png)
 ![Alt text](./assets/images/ss8.png)
+
+## todo
+
+### home page changes
+
+- header design changes (DONE)
+- search bar , top filter design and functionality change (DONE)
+- cards componenet centered
+- cards similar to swiggy
+- header always fixed to top (DONE)
+- shimmer design changes
+- footer design changes 
+  - TODO: handling both filters together functionality , if one filter is on , other should automaitcally gets off or not , to see fro m website
+
+### mobile view design
