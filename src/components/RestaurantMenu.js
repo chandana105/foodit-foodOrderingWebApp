@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import RestaurantCategory from "./RestaurantCategory";
+import RestaurantDetailsHeader from "./RestaurantDetailsHeader";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
@@ -17,14 +18,10 @@ const RestaurantMenu = () => {
     return index === activeIndex ? setActiveIndex(null) : setActiveIndex(index);
   }; // 4.
 
-  console.log({ activeIndex });
 
   if (resInfo === null) {
     return <Shimmer />;
   }
-
-  const { name, cuisines, costForTwoMessage } =
-    resInfo?.cards[2]?.card?.card?.info;
 
   const categoryList =
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
@@ -36,12 +33,12 @@ const RestaurantMenu = () => {
   return (
     <div
       className="w-6/12 m-auto  flex flex-col items-center p-4  
-      min-h-screen 
+      min-h-screen  mt-24
     "
     >
-      <h1 className="font-bold text-xl">{name}</h1>
-      <p className="font-semibold text-lg">{cuisines.join(" , ")}</p>
-      <h3 className="font-medium text-sm mb-2">{costForTwoMessage}</h3>
+      <RestaurantDetailsHeader
+        restaurantInfo={resInfo?.cards[2]?.card?.card?.info}
+      />
       {/* categories */}
       {/* accordian for each category */}
       {categoryList.map((category, index) => (

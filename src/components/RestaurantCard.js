@@ -1,27 +1,42 @@
 import { CDN_URL } from "../utils/constants";
+import { FaStar } from "react-icons/fa6";
+import { LuDot } from "react-icons/lu";
 
 const RestaurantCard = ({ resData }) => {
-  const { name, avgRating, cuisines, sla, costForTwo, cloudinaryImageId } =
-    resData.info;
+  const {
+    name,
+    avgRating,
+    cuisines,
+    sla,
+    costForTwo,
+    cloudinaryImageId,
+    areaName,
+  } = resData.info;
 
   return (
     <div
-      className="m-4 p-4 bg-slate-100 w-[250px]  shadow-xl transition-all duration-700 ease hover:w-[270px] rounded-2xl  "
+      className="mb-6 p-1 py-2  w-64 h-80 shadow-xl transition-all duration-700 ease-in-out transform hover:-translate-z-10 hover:scale-90 hover:z-0 hover:w-[260px] hover:mx-2 rounded-2xl"
       data-testid="resCard"
     >
-      <div className="h-2/6">
+      <div>
         <img
           src={`${CDN_URL}${cloudinaryImageId}`}
           alt="rest-img"
-          className=" rounded-2xl bg-cover w-full  "
+          className="rounded-2xl bg-cover w-full h-48"
         />
       </div>
-      <div className="py-4 h-4/6 ">
-        <h4 className="font-bold py-2 text-lg">{name}</h4>
-        <h4>{avgRating} star ratings</h4>
-        <h4>{cuisines.join(", ")}</h4>
-        <h4>{sla.slaString}</h4>
-        <h4>{costForTwo}</h4>
+      <div className="py-2 px-2">
+        <h4 className="font-semibold text-base">{name}</h4>
+        <div className="flex items-center font-semibold text-sm">
+          <div className="flex items-center gap-1">
+            <FaStar size={15} color="#16a34a" />
+            {avgRating}
+          </div>
+          <LuDot size={25} color="#000" className="-ml-1" />
+          <h4 className="-ml-1">{sla.slaString}</h4>
+        </div>
+        <h4 className="text-gray-600 truncate">{cuisines.join(", ")}</h4>
+        <h4 className="text-gray-600">{areaName}</h4>
       </div>
     </div>
   );
@@ -35,7 +50,7 @@ export const withVegLabel = (RestaurantCard) => {
   return (props) => {
     return (
       <>
-        <label className="absolute bg-green-600 text-white rounded-lg m-1  px-4 py-1">
+        <label className="absolute bg-green-600 text-white rounded-lg -m-2 px-4 py-1 z-50">
           Veg
         </label>
         <RestaurantCard {...props} />

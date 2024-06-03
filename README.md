@@ -112,11 +112,20 @@ imp hooks
 
 - header design changes (DONE)
 - search bar , top filter design and functionality change (DONE)
-- cards componenet centered
-- cards similar to swiggy
+- cards componenet centered (DONE)
+- cards similar to swiggy (DONE)
 - header always fixed to top (DONE)
 - shimmer design changes
 - footer design changes 
   - TODO: handling both filters together functionality , if one filter is on , other should automaitcally gets off or not , to see fro m website
+
+
+### restaurant details page changes
+
+- details header design (DONE)
+- categroy design similar to mob app
+- all categroeis to be by default open
+- on ADD button , showing quantity button 
+- react-infinite-scroll-component
 
 ### mobile view design

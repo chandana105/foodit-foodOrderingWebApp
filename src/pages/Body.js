@@ -56,7 +56,7 @@ const Body = () => {
         </div>
       </div>
       {filteredResList?.length ? (
-        <div className="flex flex-wrap justify-around m-10 mt-0 ">
+        <div className="flex flex-wrap justify-around m-1  ">
           {filteredResList?.map((restaurant) => (
             <Link
               to={`/restaurants/${restaurant.info.id}`}
