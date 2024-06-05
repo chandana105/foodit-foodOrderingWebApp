@@ -14,7 +14,7 @@ const RestaurantDetailsHeader = ({ restaurantInfo }) => {
   } = restaurantInfo;
 
   return (
-    <div className="w-full m-4 px-2 py-4 flex justify-between items-center rounded-xl border-[0.5px] border-slate-200 shadow-sm bg-white ">
+    <div className="w-[97%] m-4 p-4 flex justify-between items-center rounded-xl border-[0.5px] border-slate-200 shadow-sm bg-white ">
       {/* description */}
       <div className="px-2  flex-col">
         <h1 className="font-bold text-lg text-black">{name}</h1>
@@ -48,7 +48,9 @@ const RestaurantDetailsHeader = ({ restaurantInfo }) => {
             </div>
           )}
         </div>
-        <h2 className="text-xs text-gray-500 text-center mt-1">{totalRatingsString}</h2>
+        <h2 className="text-xs text-gray-500 text-center mt-1">
+          {totalRatingsString}
+        </h2>
       </div>
     </div>
   );

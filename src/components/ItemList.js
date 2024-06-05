@@ -3,7 +3,7 @@ import { CDN_URL } from "../utils/constants";
 import { addItem } from "../utils/cartSlice";
 import { useDispatch } from "react-redux";
 
-const ItemList = ({ itemCards, dummy }) => {
+const ItemList = ({ itemCards }) => {
   // dispatch is given by usedispatch hook
   const dispatch = useDispatch();
 

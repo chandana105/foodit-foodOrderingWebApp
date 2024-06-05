@@ -15,7 +15,7 @@ const RestaurantCard = ({ resData }) => {
 
   return (
     <div
-      className="mb-6 p-1 py-2  w-64 h-80 shadow-xl transition-all duration-700 ease-in-out transform hover:-translate-z-10 hover:scale-90 hover:z-0 hover:w-[260px] hover:mx-2 rounded-2xl"
+      className="mb-6 p-1 py-2  w-64 h-[340px] shadow-xl transition-all duration-700 ease-in-out transform hover:-translate-z-10 hover:scale-90 hover:z-0 hover:w-[260px] hover:mx-2 rounded-2xl"
       data-testid="resCard"
     >
       <div>
@@ -35,8 +35,8 @@ const RestaurantCard = ({ resData }) => {
           <LuDot size={25} color="#000" className="-ml-1" />
           <h4 className="-ml-1">{sla.slaString}</h4>
         </div>
-        <h4 className="text-gray-600 truncate">{cuisines.join(", ")}</h4>
-        <h4 className="text-gray-600">{areaName}</h4>
+        <h4 className="text-gray-500 truncate text-sm">{cuisines.join(", ")}</h4>
+        <h4 className="text-gray-500 text-sm">{areaName}</h4>
       </div>
     </div>
   );
