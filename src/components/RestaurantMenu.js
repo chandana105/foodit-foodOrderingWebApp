@@ -5,6 +5,8 @@ import useRestaurantMenu from "../utils/useRestaurantMenu";
 import RestaurantCategory from "./RestaurantCategory";
 import RestaurantDetailsHeader from "./RestaurantDetailsHeader";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { BeatLoader } from "react-spinners";
+
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
@@ -63,22 +65,28 @@ const RestaurantMenu = () => {
       <RestaurantDetailsHeader
         restaurantInfo={resInfo?.cards[2]?.card?.card?.info}
       />
-      <InfiniteScroll
-        dataLength={categories.length}
-        next={fetchMoreData}
-        hasMore={hasMore}
-        loader={<h4>Loading...</h4>}
-        endMessage={<></>}
-      >
-        {categories.map((category, index) => (
-          <RestaurantCategory
-            key={category?.card?.card?.title}
-            category={category?.card?.card}
-            showMenuItems={openCategories[index]}
-            handleToggle={() => handleToggle(index)}
-          />
-        ))}
-      </InfiniteScroll>
+      <div className="w-full">
+        <InfiniteScroll
+          dataLength={categories.length}
+          next={fetchMoreData}
+          hasMore={hasMore}
+          loader={
+            <div className="flex items-center justify-center mt-2">
+              <BeatLoader color="#EA580C" />
+            </div>
+          }
+          endMessage={<></>}
+        >
+          {categories.map((category, index) => (
+            <RestaurantCategory
+              key={category?.card?.card?.title}
+              category={category?.card?.card}
+              showMenuItems={openCategories[index]}
+              handleToggle={() => handleToggle(index)}
+            />
+          ))}
+        </InfiniteScroll>
+      </div>
     </div>
   );
 };
