@@ -1,12 +1,14 @@
-import RestaurantCard, { withVegLabel } from "../components/RestaurantCard";
+import RestaurantCard, {
+  withVegLabel,
+} from "../components/Home/RestaurantCard";
 import { useState } from "react";
 import Shimmer from "../components/Shimmer";
 import { Link } from "react-router-dom";
 import useRestaurantsList from "../utils/useRestaurantsList";
-import SearchBar from "../components/SearchBar";
+import SearchBar from "../components/Home/SearchBar";
 import { IoMdCloseCircle } from "react-icons/io";
 
-const Body = () => {
+const Home = () => {
   const { myResList, filteredResList, setFilteredResList } =
     useRestaurantsList();
   const [isFilterOn, setIsFilterOn] = useState(false);
@@ -79,4 +81,4 @@ const Body = () => {
   );
 };
 
-export default Body;
+export default Home;

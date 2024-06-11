@@ -2,14 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Body from "./pages/Body";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Error from "./pages/Error";
 import { Outlet } from "react-router-dom";
-import RestaurantPage from "./components/RestaurantMenu";
+import RestaurantPage from "./pages/RestaurantMenu";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./pages/Cart";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
@@ -32,7 +32,7 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Body />,
+        element: <Home />,
       },
       {
         path: "/cart",

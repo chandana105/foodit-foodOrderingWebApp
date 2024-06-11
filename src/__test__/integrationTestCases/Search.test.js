@@ -1,9 +1,9 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import Body from "../../components/Body";
 import MOCK_DATA from "../../mocks/mockResList.json";
 import { act } from "react-dom/test-utils";
 import { BrowserRouter } from "react-router-dom";
 import "@testing-library/jest-dom";
+import Home from "../../pages/Home";
 
 global.fetch = jest.fn(() => {
   // mocking actual fetch (returns a promise which is in reponse)
@@ -22,7 +22,7 @@ it("Should search Res List for Dhaba", async () => {
   await act(async () =>
     render(
       <BrowserRouter>
-        <Body />
+        <Home />
       </BrowserRouter>
     )
   );
@@ -48,7 +48,7 @@ it("Should filter top Rated restaurants", async () => {
   await act(async () =>
     render(
       <BrowserRouter>
-        <Body />
+        <Home />
       </BrowserRouter>
     )
   );

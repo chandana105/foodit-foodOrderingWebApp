@@ -1,12 +1,11 @@
-import Shimmer from "./Shimmer";
+import Shimmer from "../components/Shimmer";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
-import RestaurantCategory from "./RestaurantCategory";
-import RestaurantDetailsHeader from "./RestaurantDetailsHeader";
+import RestaurantCategory from "../components/RestaurantMenu/RestaurantCategory";
+import RestaurantDetailsHeader from "../components/RestaurantMenu/RestaurantDetailsHeader";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { BeatLoader } from "react-spinners";
-
 
 const RestaurantMenu = () => {
   const { resId } = useParams();

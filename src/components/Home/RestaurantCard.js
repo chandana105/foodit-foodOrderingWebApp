@@ -1,17 +1,10 @@
-import { CDN_URL } from "../utils/constants";
+import { CDN_URL } from "../../utils/constants";
 import { FaStar } from "react-icons/fa6";
 import { LuDot } from "react-icons/lu";
 
 const RestaurantCard = ({ resData }) => {
-  const {
-    name,
-    avgRating,
-    cuisines,
-    sla,
-    costForTwo,
-    cloudinaryImageId,
-    areaName,
-  } = resData.info;
+  const { name, avgRating, cuisines, sla, cloudinaryImageId, areaName } =
+    resData.info;
 
   return (
     <div
@@ -35,7 +28,9 @@ const RestaurantCard = ({ resData }) => {
           <LuDot size={25} color="#000" className="-ml-1" />
           <h4 className="-ml-1">{sla.slaString}</h4>
         </div>
-        <h4 className="text-gray-500 truncate text-sm">{cuisines.join(", ")}</h4>
+        <h4 className="text-gray-500 truncate text-sm">
+          {cuisines.join(", ")}
+        </h4>
         <h4 className="text-gray-500 text-sm">{areaName}</h4>
       </div>
     </div>

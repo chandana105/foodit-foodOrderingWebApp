@@ -123,9 +123,12 @@ imp hooks
 ### restaurant details page changes
 
 - details header design (DONE)
-- categroy design similar to mob app
-- all categroeis to be by default open
-- on ADD button , showing quantity button 
-- react-infinite-scroll-component
+- categroy design similar to mob app (DONE)
+- all categroeis to be by default open (DONE)
+- react-infinite-scroll-component (DONE)
+
+### cart page functionality (similar to mobile app )
+
+- cart page design modify 
 
 ### mobile view design
