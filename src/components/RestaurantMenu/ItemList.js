@@ -1,13 +1,25 @@
 import React from "react";
 import { CDN_URL } from "../../utils/constants";
-import { addItem } from "../../utils/cartSlice";
-import { useDispatch } from "react-redux";
+import { addItem } from "../../store/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const ItemList = ({ itemCards }) => {
+  const restaurant = useSelector((state) => state?.restaurant?.restaurant);
+  const cart = useSelector((state) => state.cart);
+
   const dispatch = useDispatch();
 
+  // const handleAddItem = (item) => {
+  //   dispatch(addItem(item));
+  // };
+
   const handleAddItem = (item) => {
-    dispatch(addItem(item));
+    if (cart.resId && cart.resId !== restaurant?.id) {
+      // setModalVisible(true);
+      console.log("modal visible")
+    } else {
+      dispatch(addItem({ restaurant, item }));
+    }
   };
 
   return (

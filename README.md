@@ -129,6 +129,13 @@ imp hooks
 
 ### cart page functionality (similar to mobile app )
 
-- cart page design modify 
+- cart page design modify (DONE) 
+- redux state modify for cart (DONE)
+- on press of add button changed to quantity
+- show 1 item added footer
+- cart info footer in home page
+- quantity buttons in Cart page
+- remove cart modal
+- replace cart items modal
 
 ### mobile view design

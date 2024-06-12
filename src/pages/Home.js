@@ -4,7 +4,7 @@ import RestaurantCard, {
 import { useState } from "react";
 import Shimmer from "../components/Shimmer";
 import { Link } from "react-router-dom";
-import useRestaurantsList from "../utils/useRestaurantsList";
+import useRestaurantsList from "../hooks/useRestaurantsList";
 import SearchBar from "../components/Home/SearchBar";
 import { IoMdCloseCircle } from "react-icons/io";
 

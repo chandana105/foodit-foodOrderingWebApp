@@ -7,7 +7,7 @@ import Error from "./pages/Error";
 import { Outlet } from "react-router-dom";
 import RestaurantPage from "./pages/RestaurantMenu";
 import { Provider } from "react-redux";
-import appStore from "./utils/appStore";
+import appStore from "./store/appStore";
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 

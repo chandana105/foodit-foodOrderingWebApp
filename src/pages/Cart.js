@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import InfiniteScroll from "react-infinite-scroll-component";
 import CartHeader from "../components/Cart/CartHeader";
 import CartItems from "../components/Cart/CartItems";
 import CartFooter from "../components/Cart/CartFooter";
+import { BeatLoader } from "react-spinners";
 
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
@@ -23,8 +24,13 @@ const Cart = () => {
     }, 500);
   };
 
+  useEffect(() => {
+    setItems(cartItems.slice(0, 10));
+    setHasMore(cartItems.length > 10);
+  }, [cartItems]);
+
   return (
-    <div className="w-full mb-2 rounded-md m-4 p-4 mt-24 ">
+    <div className="w-full mb-2 rounded-md m-4 p-4 mt-24">
       <div className="flex flex-col w-6/12 m-auto items-center justify-between">
         {cartItems.length === 0 ? (
           <h1 className="text-2xl font-bold">
@@ -46,10 +52,16 @@ const Cart = () => {
                 dataLength={items.length}
                 next={fetchMoreData}
                 hasMore={hasMore}
-                loader={<h4>Loading...</h4>}
+                loader={
+                  <div className="flex items-center justify-center mt-2">
+                    <BeatLoader color="#EA580C" />
+                  </div>
+                }
                 scrollableTarget="scrollableDiv"
               >
-                <CartItems itemCards={items} />
+                {items.map((item, index) => (
+                  <CartItems key={index} item={item} />
+                ))}
               </InfiniteScroll>
             </div>
             <CartFooter />

@@ -1,14 +1,14 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const CartFooter = () => {
+  const cart = useSelector((state) => state.cart);
+
   return (
     <div className="relative p-5 mt-5 space-y-4 w-full bg-white shadow-xl shadow-top rounded-md">
       <div className="flex justify-between">
         <h2 className="text-gray-400">Subtotal</h2>
-        <h2 className="text-gray-400">
-          {/* ₹{(cart.orderTotal - 20).toFixed(2)} */}
-          ₹100
-        </h2>
+        <h2 className="text-gray-400">₹{(cart.orderTotal - 20).toFixed(2)}</h2>
       </div>
 
       <div className="flex justify-between">
@@ -19,8 +19,7 @@ const CartFooter = () => {
       <div className="flex justify-between">
         <h1 className="text-black">Order Total</h1>
         <h1 className="text-black font-extrabold">
-          {/* ₹{cart.orderTotal.toFixed(2)} */}
-          ₹100
+          ₹{cart.orderTotal.toFixed(2)}
         </h1>
       </div>
 

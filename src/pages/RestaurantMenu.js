@@ -1,15 +1,18 @@
 import Shimmer from "../components/Shimmer";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import useRestaurantMenu from "../utils/useRestaurantMenu";
+import useRestaurantMenu from "../hooks/useRestaurantMenu";
 import RestaurantCategory from "../components/RestaurantMenu/RestaurantCategory";
 import RestaurantDetailsHeader from "../components/RestaurantMenu/RestaurantDetailsHeader";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { BeatLoader } from "react-spinners";
+import { clearRestaurant, setRestaurant } from "../store/restaurantSlice";
+import { useDispatch } from "react-redux";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
   const resInfo = useRestaurantMenu(resId);
+  const dispatch = useDispatch();
 
   const [openCategories, setOpenCategories] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -21,6 +24,21 @@ const RestaurantMenu = () => {
       loadCategories(1);
     }
   }, [resInfo]);
+
+  useEffect(() => {
+    // Clear the restaurant details when component mounts
+    dispatch(clearRestaurant());
+
+    // Set the new restaurant details
+    if (resInfo) {
+      dispatch(setRestaurant(resInfo.cards[2].card.card.info));
+    }
+
+    // Cleanup when component unmounts or resId changes
+    return () => {
+      dispatch(clearRestaurant());
+    };
+  }, [resId, resInfo, dispatch]);
 
   const loadCategories = (page) => {
     const allCategories =
