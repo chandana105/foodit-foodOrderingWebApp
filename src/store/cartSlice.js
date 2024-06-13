@@ -24,7 +24,6 @@ export const cartSlice = createSlice({
   reducers: {
     addItem: (state, action) => {
       const { restaurant, item } = action.payload;
-
       state.resId = restaurant.id;
       state.restaurantName = restaurant.name;
       state.resImage = restaurant.cloudinaryImageId;

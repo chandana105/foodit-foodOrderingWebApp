@@ -131,11 +131,12 @@ imp hooks
 
 - cart page design modify (DONE) 
 - redux state modify for cart (DONE)
-- on press of add button changed to quantity
+- on press of add button changed to quantity (DONE)
 - show 1 item added footer
 - cart info footer in home page
 - quantity buttons in Cart page
 - remove cart modal
 - replace cart items modal
+- REFACTORING BY MAKING USEHOOKS
 
 ### mobile view design
