@@ -1,23 +1,36 @@
 import { useDispatch, useSelector } from "react-redux";
 import {
   addItem,
+  clearCart,
   decrementQuantity,
   incrementQuantity,
 } from "../store/cartSlice";
+import { useState } from "react";
 
 const useMenuListItem = (item) => {
   const restaurant = useSelector((state) => state?.restaurant?.restaurant);
   const cart = useSelector((state) => state.cart);
 
+  const [isModalVisible, setModalVisible] = useState(false);
+
   const dispatch = useDispatch();
 
   const handleAddItem = () => {
     if (cart.resId && cart.resId !== restaurant?.id) {
-      // setModalVisible(true);
-      console.log("modal visible");
+      setModalVisible(true);
     } else {
       dispatch(addItem({ restaurant, item }));
     }
+  };
+
+  const handleConfirmReplace = () => {
+    dispatch(clearCart());
+    dispatch(addItem({ restaurant, item }));
+    setModalVisible(false);
+  };
+
+  const handleCancelReplace = () => {
+    setModalVisible(false);
   };
 
   const handleIncrement = () => {
@@ -37,7 +50,10 @@ const useMenuListItem = (item) => {
     handleAddItem,
     handleIncrement,
     handleDecrement,
+    handleCancelReplace,
+    handleConfirmReplace,
     quantity,
+    isModalVisible,
   };
 };
 

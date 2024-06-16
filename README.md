@@ -116,9 +116,8 @@ imp hooks
 - cards similar to swiggy (DONE)
 - header always fixed to top (DONE)
 - shimmer design changes
-- footer design changes 
+- footer design changes
   - TODO: handling both filters together functionality , if one filter is on , other should automaitcally gets off or not , to see fro m website
-
 
 ### restaurant details page changes
 
@@ -129,14 +128,13 @@ imp hooks
 
 ### cart page functionality (similar to mobile app )
 
-- cart page design modify (DONE) 
+- cart page design modify (DONE)
 - redux state modify for cart (DONE)
 - on press of add button changed to quantity (DONE)
-- show 1 item added footer
-- cart info footer in home page
-- quantity buttons in Cart page
-- remove cart modal
-- replace cart items modal
+- quantity buttons in Cart page (DONE)
+- replace cart items modal (DONE)
+- cart dele modal (DONE)
 - REFACTORING BY MAKING USEHOOKS
+- TODO: in next phase (addign toaster for every action)
 
 ### mobile view design

@@ -12,7 +12,7 @@ const QunatityWithoutImage = ({
         <div className="absolute  bottom-0 left-0 w-full flex justify-center">
           <div className="bg-white shadow-md w-[87]">
             <div className="flex items-center justify-between py-1 px-3 bg-white rounded-md border border-gray-200 ">
-              <button className="" onClick={handleDecrement}>
+              <button onClick={handleDecrement}>
                 <div className="text-green-600 text-lg uppercase font-bold">
                   -
                 </div>
