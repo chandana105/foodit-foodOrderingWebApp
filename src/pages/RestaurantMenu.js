@@ -1,4 +1,3 @@
-import Shimmer from "../components/Shimmer";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../hooks/useRestaurantMenu";
@@ -8,6 +7,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { BeatLoader } from "react-spinners";
 import { clearRestaurant, setRestaurant } from "../store/restaurantSlice";
 import { useDispatch } from "react-redux";
+import RestaurantMenuShimmerUI from "../components/RestaurantMenu/RestaurantMenuShimmerUI";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
@@ -67,7 +67,7 @@ const RestaurantMenu = () => {
   };
 
   if (resInfo === null) {
-    return <Shimmer />;
+    return <RestaurantMenuShimmerUI />;
   }
 
   const fetchMoreData = () => {

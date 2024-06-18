@@ -2,11 +2,11 @@ import RestaurantCard, {
   withVegLabel,
 } from "../components/Home/RestaurantCard";
 import { useState } from "react";
-import Shimmer from "../components/Shimmer";
 import { Link } from "react-router-dom";
 import useRestaurantsList from "../hooks/useRestaurantsList";
 import SearchBar from "../components/Home/SearchBar";
 import { IoMdCloseCircle } from "react-icons/io";
+import HomeShimmerUI from "../components/HomeShimmerUI";
 
 const Home = () => {
   const { myResList, filteredResList, setFilteredResList } =
@@ -38,7 +38,7 @@ const Home = () => {
   const RestaurantCardWithVeg = withVegLabel(RestaurantCard);
 
   return myResList?.length === 0 ? (
-    <Shimmer />
+    <HomeShimmerUI />
   ) : (
     <div className="w-9/12 m-auto min-h-screen flex flex-col">
       <div className="flex m-4 p-4  items-center justify-center mt-24 ">
