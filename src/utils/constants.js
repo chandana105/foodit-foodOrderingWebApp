@@ -11,6 +11,3 @@ export const MENU_API_END_URL = "&catalog_qa=undefined";
 
 export const RESTAURANTS_LIST_URL =
   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=31.33103899100404&lng=75.57223644107582&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
-
-// export const RESTAURANTS_LIST_URL =
-//   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.73390&lng=76.78890&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";

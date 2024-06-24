@@ -6,7 +6,6 @@ import { MdImageNotSupported } from "react-icons/md";
 
 const CartItems = ({ item }) => {
   const dispatch = useDispatch();
-  console.log({item}, 'in cartitems')
   const { item: cartItem, quantity } = item;
   const { card } = cartItem;
   const { info } = card;

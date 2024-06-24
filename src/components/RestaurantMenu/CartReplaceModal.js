@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Modal from "react-modal";
 import { useSelector } from "react-redux";
 import { IoMdCloseCircle } from "react-icons/io";
@@ -35,7 +35,7 @@ export default function CartReplaceModal({
     },
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isModalVisible) {
       document.body.style.overflow = "hidden";
     } else {

@@ -1,39 +1,22 @@
 import RestaurantCard, {
   withVegLabel,
 } from "../components/Home/RestaurantCard";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import useRestaurantsList from "../hooks/useRestaurantsList";
 import SearchBar from "../components/Home/SearchBar";
 import { IoMdCloseCircle } from "react-icons/io";
-import HomeShimmerUI from "../components/HomeShimmerUI";
+import HomeShimmerUI from "../components/Home/HomeShimmerUI";
+import useHomePage from "../hooks/useHomePage";
 
 const Home = () => {
-  const { myResList, filteredResList, setFilteredResList } =
-    useRestaurantsList();
-  const [isFilterOn, setIsFilterOn] = useState(false);
+  const { myResList, filteredResList } = useRestaurantsList();
 
-  const handleFilter = (text) => {
-    if (text) {
-      const filteredRestaurants = myResList.filter((res) =>
-        res.info.name.toLowerCase().includes(text.toLowerCase())
-      );
-      setFilteredResList(filteredRestaurants);
-    } else {
-      setFilteredResList(myResList);
-    }
-  };
-
-  const handleFilterTopRatedRestaurants = () => {
-    setIsFilterOn(true);
-    const filteredList = myResList.filter((list) => list.info.avgRating > 4.3);
-    setFilteredResList(filteredList);
-  };
-
-  const handleCloseFilter = () => {
-    setIsFilterOn(false);
-    setFilteredResList(myResList);
-  };
+  const {
+    isFilterOn,
+    handleCloseFilter,
+    handleFilter,
+    handleFilterTopRatedRestaurants,
+  } = useHomePage(myResList);
 
   const RestaurantCardWithVeg = withVegLabel(RestaurantCard);
 

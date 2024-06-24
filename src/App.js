@@ -10,6 +10,7 @@ import { Provider } from "react-redux";
 import appStore from "./store/appStore";
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
+import Modal from "react-modal";
 
 const App = () => {
   return (
@@ -46,6 +47,8 @@ const appRouter = createBrowserRouter([
     errorElement: <Error />,
   },
 ]);
+
+Modal.setAppElement("#root");
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

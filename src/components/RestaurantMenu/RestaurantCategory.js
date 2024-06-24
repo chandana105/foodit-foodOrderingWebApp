@@ -67,9 +67,9 @@ const RestaurantCategory = ({ category, showMenuItems, handleToggle }) => {
               scrollableTarget={scrollableTarget}
             >
               {/* <MenuListItem itemCards={items} /> */}
-              <div className="mt-6 ">
+              <div className="mt-6">
                 {items.map((item) => (
-                  <MenuListItem item={item} />
+                  <MenuListItem item={item} key={item.card.info.id} />
                 ))}
               </div>
             </InfiniteScroll>

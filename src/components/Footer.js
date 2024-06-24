@@ -2,15 +2,18 @@ import { LOGO_URL } from "../utils/constants";
 
 const Footer = () => {
   return (
-    <div className="flex justify-between items-center shadow-md bg-pink-200 p-4 w-full">
+    <div
+      className="flex justify-around
+     items-center shadow-top  p-4 w-full px-44 shadow-md bg-slate-50"
+    >
       <div>
-        <img src={LOGO_URL} alt="logo" className="w-40" />
+        <img src={LOGO_URL} alt="logo" className="w-32" />
       </div>
-      <h4>© 2023 Swiggy</h4>
+      <h4 className="">© 2023 FoodApp</h4>
       <ul className="flex items-center">
-        <li className="px-4">Insta</li>
-        <li className="px-4">Fb</li>
-        <li className="px-4">Google</li>
+        <li className="px-4 ">Insta</li>
+        <li className="px-4 ">Fb</li>
+        <li className="px-4 ">Google</li>
       </ul>
     </div>
   );

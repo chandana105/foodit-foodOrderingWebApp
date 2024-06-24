@@ -8,7 +8,7 @@ const RestaurantCard = ({ resData }) => {
 
   return (
     <div
-      className="mb-6 p-1 py-2  w-64 h-[340px] shadow-xl transition-all duration-700 ease-in-out transform hover:-translate-z-10 hover:scale-90 hover:z-0 hover:w-[260px] hover:mx-2 rounded-2xl"
+      className="mb-6 p-1 py-2  w-64 h-[340px] shadow-xl transition-all duration-700 ease-in-out transform hover:-translate-z-10 hover:scale-95 hover:z-0 hover:w-[260px] hover:mx-2 rounded-2xl"
       data-testid="resCard"
     >
       <div>
@@ -45,7 +45,7 @@ export const withVegLabel = (RestaurantCard) => {
   return (props) => {
     return (
       <>
-        <label className="absolute bg-green-600 text-white rounded-lg -m-2 px-4 py-1 z-50">
+        <label className="absolute bg-green-600 text-white rounded-lg -my-2 -mx-3 px-4 py-1 z-40">
           Veg
         </label>
         <RestaurantCard {...props} />

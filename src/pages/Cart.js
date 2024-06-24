@@ -1,50 +1,24 @@
-import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
+import { useSelector } from "react-redux";
 import InfiniteScroll from "react-infinite-scroll-component";
 import CartHeader from "../components/Cart/CartHeader";
 import CartItems from "../components/Cart/CartItems";
 import CartFooter from "../components/Cart/CartFooter";
 import { BeatLoader } from "react-spinners";
 import CartDeleteModal from "../components/Cart/CartDeleteModal";
-import { clearCart } from "../store/cartSlice";
+import useCartPage from "../hooks/useCartPage";
 
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
-  const [items, setItems] = useState(cartItems.slice(0, 10));
-  const [hasMore, setHasMore] = useState(cartItems.length > 10);
-  const [isModalVisible, setModalVisible] = useState(false);
-  const dispatch = useDispatch();
-
-  const fetchMoreData = () => {
-    if (items.length >= cartItems.length) {
-      setHasMore(false);
-      return;
-    }
-    setTimeout(() => {
-      setItems((prevItems) => [
-        ...prevItems,
-        ...cartItems.slice(prevItems.length, prevItems.length + 10),
-      ]);
-    }, 500);
-  };
-
-  const handleConfirmDelete = () => {
-    dispatch(clearCart());
-    setModalVisible(false);
-  };
-
-  const handleCancelDelete = () => {
-    setModalVisible(false);
-  };
-
-  useEffect(() => {
-    setItems(cartItems.slice(0, 10));
-    setHasMore(cartItems.length > 10);
-  }, [cartItems]);
-
-  const handleClearCart = () => {
-    setModalVisible(true);
-  };
+  const {
+    items,
+    hasMore,
+    isModalVisible,
+    fetchMoreData,
+    handleCancelDelete,
+    handleClearCart,
+    handleConfirmDelete,
+  } = useCartPage(cartItems);
 
   return (
     <div className="w-full mb-2 rounded-md m-4 p-4 mt-24">

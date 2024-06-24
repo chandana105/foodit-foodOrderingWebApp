@@ -108,7 +108,7 @@ imp hooks
 
 ## todo
 
-- TODO: update final screenshots 
+- TODO: update final screenshots
 - TODO: add to netlify
 - TODO: update readme
 
@@ -119,8 +119,8 @@ imp hooks
 - cards componenet centered (DONE)
 - cards similar to swiggy (DONE)
 - header always fixed to top (DONE)
-- TODO:shimmer design changes
-- TODO:footer design changes
+- shimmer design changes (DONE)
+- footer design changes (DONE)
   - TODO: handling both filters together functionality , if one filter is on , other should automaitcally gets off or not , to see fro m website
 
 ### restaurant details page changes
@@ -138,7 +138,8 @@ imp hooks
 - quantity buttons in Cart page (DONE)
 - replace cart items modal (DONE)
 - cart dele modal (DONE)
-- TODO:REFACTORING BY MAKING USEHOOKS
-- TODO: in next phase (addign toaster for every action)
+- REFACTORING BY MAKING USEHOOKS (DONE)
+- TODO: removign unwanted code and code files 
+- TODO: tests folder tocheck 
 
 ### TODO:mobile view design
