@@ -6,7 +6,7 @@ const QuantityWithImage = ({
   handleAddItem,
   handleDecrement,
   handleIncrement,
-  quantity
+  quantity,
 }) => {
   return (
     <>
@@ -16,18 +16,23 @@ const QuantityWithImage = ({
       />
       {quantity > 0 ? (
         <div className="absolute">
-          <div className="absolute bottom-[-18px] left-[14px] mx-auto bg-white shadow-md w-[87]">
+          <div
+            className="absolute bottom-[-18px] 
+          left-4 sm:left-3  
+            lg:left-2 xl:left-[14px] w-[67]
+          xl:w-[87] sm:w-[68]  lg:w-[80] md:w-[95] mx-auto bg-white shadow-md "
+          >
             <div className=" -mt-5 flex items-center justify-between py-1 px-3 bg-white rounded-md border border-gray-200 ">
               <button className="" onClick={handleDecrement}>
-                <div className="text-green-600 text-lg uppercase font-bold">
+                <div className="text-green-600 text-sm lg:text-lg uppercase font-bold">
                   -
                 </div>
               </button>
-              <h2 className="text-green-600 text-lg uppercase font-bold">
+              <h2 className="text-green-600 text-md lg:text-lg  uppercase font-bold">
                 {quantity}
               </h2>
               <button className="" onClick={handleIncrement}>
-                <div className="text-green-600 text-lg uppercase font-bold">
+                <div className="text-green-600 text-sm lg:text-lg  uppercase font-bold">
                   +
                 </div>
               </button>
@@ -37,7 +42,11 @@ const QuantityWithImage = ({
       ) : (
         <div className="absolute">
           <button
-            className="absolute bottom-[-18px] left-[14px] flex justify-center items-center m-auto px-7 py-2 bg-white rounded-md border border-gray-200 shadow-md text-green-600 text-sm"
+            className="sm:px-4 md:px-8 lg:px-5 xl:px-7 px-[18px]  py-2
+            absolute bottom-[-18px] left-4 sm:left-4 
+            lg:left-3 xl:left-[14px] flex justify-center items-center
+              m-auto  bg-white rounded-md border
+               border-gray-200 shadow-md text-green-600 text-xs lg:text-sm"
             onClick={handleAddItem}
           >
             ADD

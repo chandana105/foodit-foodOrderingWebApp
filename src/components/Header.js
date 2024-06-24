@@ -15,7 +15,7 @@ const Header = () => {
   );
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 flex justify-around shadow-md bg-pink-200 sm:bg-yellow-200 lg:bg-white ">
+    <div className="fixed top-0 left-0 w-full z-50 flex justify-around shadow-md bg-pink-200 sm:bg-yellow-200 md:bg-green-200 lg:bg-white ">
       <div>
         <Link to="/">
           <img src={LOGO_URL} alt="logo" className="w-32" />

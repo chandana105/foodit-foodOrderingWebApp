@@ -24,7 +24,7 @@ const Home = () => {
     <HomeShimmerUI />
   ) : (
     <div className="w-9/12 m-auto min-h-screen flex flex-col">
-      <div className="flex m-4 p-4  items-center justify-center mt-24 ">
+      <div className="flex m-4 p-4  items-center justify-center mt-24 flex-col sm:flex-row ">
         <SearchBar handleFilter={handleFilter} />
         <div className="bg-orange-600  rounded-lg p-4 flex justify-between items-center  ">
           <button

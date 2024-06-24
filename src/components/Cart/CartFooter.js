@@ -5,7 +5,7 @@ const CartFooter = () => {
   const cart = useSelector((state) => state.cart);
 
   return (
-    <div className="relative p-5 mt-5 space-y-4 w-full bg-white shadow-xl shadow-top rounded-md">
+    <div className="relative p-5 mt-5 space-y-4 w-full bg-white shadow-xl rounded-md">
       <div className="flex justify-between">
         <h2 className="text-gray-400">Subtotal</h2>
         <h2 className="text-gray-400">₹{(cart.orderTotal - 20).toFixed(2)}</h2>

@@ -24,7 +24,7 @@ const CartItems = ({ item }) => {
 
   return (
     <React.Fragment key={`${info.id}-${quantity}`}>
-      <div className="flex items-center bg-white p-4 w-full ">
+      <div className="flex items-center bg-white p-4 w-full">
         {info?.imageId ? (
           <img
             src={`${CDN_URL}${info.imageId}`}
@@ -36,7 +36,7 @@ const CartItems = ({ item }) => {
           </div>
         )}
 
-        <h1 className="flex-1 text-gray-700 text-base mx-3 max-w-[45%]">
+        <h1 className="flex-1 text-gray-700 text-base mx-3 max-w-[45%] truncate">
           {info?.name}
         </h1>
         <div className="flex items-center justify-between py-2 px-3 bg-white rounded-md border border-gray-200 space-x-4">
@@ -49,7 +49,7 @@ const CartItems = ({ item }) => {
           <button className="px-2" onClick={handleIncrement}>
             <div className="text-green-600 text-lg uppercase font-bold">+</div>
           </button>
-        </div>
+        </div>    
         <div className="ml-auto text-right pr-1">
           <h3 className="text-black text-base font-semibold">
             ₹
@@ -59,7 +59,7 @@ const CartItems = ({ item }) => {
           </h3>
         </div>
       </div>
-      <div className="h-[0.5] bg-gray-300" />
+      <div className="h-[0.5] bg-gray-300 my-2" />
     </React.Fragment>
   );
 };

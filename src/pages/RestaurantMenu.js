@@ -19,7 +19,7 @@ const RestaurantMenu = () => {
   }
 
   return (
-    <div className="w-6/12 m-auto flex flex-col items-center p-4 min-h-screen mt-24">
+    <div className="w-12/12 lg:w-6/12 sm:w-10/12  m-auto flex flex-col items-center p-4 min-h-screen mt-24">
       <RestaurantDetailsHeader
         restaurantInfo={resInfo?.cards[2]?.card?.card?.info}
       />
