@@ -70,30 +70,9 @@ imp hooks
 - Dispatch an action and call reducer function , dispatch(action) when clicked on add btn
 - Selector
 
-# Types of Testing (developer)
 
-- ## Unit Testing :-
-  U test your react components in isolation(eg:- if to do testing of just header component, i ll do the unit testign of that header component, i ll just test the header comp in siloation of my app, basically i ll just render my header comp and see whether it got rendered properly or not, inly one specifc comp is known as unit testing, u are tesitng small unit (comp) of ur react app )
-- ## Integration Testing :-
 
-  Testing the integration of the components, so eg when we have big large app, there are so many comp's and these comps talk to each other , eg:- when i wrote pizza on search then results were shown, in this feature, so many comp's collablorated to make this feature (so its integration of so many comp's) . so it menas there are multiple comp's and they are talking to each other and we ll develop a flow of an action in a react app, that we ll test,like on live there are 20 cards shown then like we ll test that if somebody is writing pizza on search box and click on search button then 3 items should be visible., there is events happneing click event etc
 
-- ## end to end Testing (e2e Testing) :-
-  Testing a react app as soon as user lands on website to the user leaves the website and we ll test all the flows (like user landing on page, clicking on login button, entering username and password , going inside it , finding inside cart and checkout, basically its simulating what the user will do througout in the application) , e2e testing requried diff types of tools :- cyprus, silenuim etc
-  <!-- As a developer we are majorly concerned about first two types of testing -->
-
-# Setting up Testing in our app
-
-- Install React Testign library
-- Installed jest
-- Installled babel dependencies (required when we are using jest with babel)
-- Configure Babel
-- Configure Parcel Config file to disable default babel transpilations
-- Jest Configuration (npx jest --init) (it ll initalize the jest and create new configuration file for jest) (why npx, not npm ? :- we are just executing the jest package)
-- Install jsdom library
-- Install @babel/preset-react - to make JSX work in test cases
-- Include @babel/preset-react inside my babel config
-- Install npm i -D @testing-library/jest-dom (for tobeinthedocument , for screen functions)
 
 ### Screenshots of app
 
@@ -139,7 +118,7 @@ imp hooks
 - replace cart items modal (DONE)
 - cart dele modal (DONE)
 - REFACTORING BY MAKING USEHOOKS (DONE)
-- TODO: removign unwanted code and code files 
-- TODO: tests folder tocheck 
+- removign unwanted code and code files (DONE)
 
-### TODO:mobile view design
+### mobile view design (DONE)
+

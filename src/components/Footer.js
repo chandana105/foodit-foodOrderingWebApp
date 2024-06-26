@@ -1,19 +1,17 @@
+import React from "react";
 import { LOGO_URL } from "../utils/constants";
 
 const Footer = () => {
   return (
-    <div
-      className="flex justify-around
-     items-center shadow-top  p-4 w-full px-44 shadow-md bg-slate-50"
-    >
-      <div>
-        <img src={LOGO_URL} alt="logo" className="w-32" />
+    <div className="flex flex-col sm:flex-row justify-between items-center shadow-top p-4 w-full shadow-md bg-slate-50 px-4 md:px-20">
+      <div className="mb-4 sm:mb-0">
+        <img src={LOGO_URL} alt="logo" className="w-24 sm:w-32" />
       </div>
-      <h4 className="">© 2023 FoodApp</h4>
-      <ul className="flex items-center">
-        <li className="px-4 ">Insta</li>
-        <li className="px-4 ">Fb</li>
-        <li className="px-4 ">Google</li>
+      <h4 className="mb-4 sm:mb-0">© 2023 FoodApp</h4>
+      <ul className="flex items-center space-x-4">
+        <li>Insta</li>
+        <li>Fb</li>
+        <li>Google</li>
       </ul>
     </div>
   );

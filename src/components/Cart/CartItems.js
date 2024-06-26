@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { CDN_URL } from "../../utils/constants";
 import { useDispatch } from "react-redux";
 import { decrementQuantity, incrementQuantity } from "../../store/cartSlice";
@@ -23,7 +23,7 @@ const CartItems = ({ item }) => {
   };
 
   return (
-    <React.Fragment key={`${info.id}-${quantity}`}>
+    <Fragment key={`${info.id}-${quantity}`}>
       <div className="flex items-center bg-white p-4 w-full">
         {info?.imageId ? (
           <img
@@ -60,7 +60,7 @@ const CartItems = ({ item }) => {
         </div>
       </div>
       <div className="h-[0.5] bg-gray-300 my-2" />
-    </React.Fragment>
+    </Fragment>
   );
 };
 
