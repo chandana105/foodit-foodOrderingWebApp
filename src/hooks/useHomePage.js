@@ -2,10 +2,10 @@ import { useState } from "react";
 import useRestaurantsList from "./useRestaurantsList";
 
 const useHomePage = (myResList) => {
-  const { setFilteredResList } = useRestaurantsList();
+  const { setFilteredResList, filteredResList } = useRestaurantsList();
   const [isFilterOn, setIsFilterOn] = useState(false);
 
-  const handleFilter = (text) => {
+  const handleSearchFilter = (text) => {
     if (text) {
       const filteredRestaurants = myResList.filter((res) =>
         res.info.name.toLowerCase().includes(text.toLowerCase())
@@ -26,10 +26,12 @@ const useHomePage = (myResList) => {
     setIsFilterOn(false);
     setFilteredResList(myResList);
   };
+
   return {
     isFilterOn,
+    filteredResList,
     handleCloseFilter,
-    handleFilter,
+    handleSearchFilter,
     handleFilterTopRatedRestaurants,
   };
 };

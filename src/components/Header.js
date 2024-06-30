@@ -11,7 +11,7 @@ const Header = () => {
   const totalQuantity = cart.items.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 flex justify-between items-center shadow-md bg-pink-200 sm:bg-yellow-200 md:bg-green-200 lg:bg-white px-4 md:px-20">
+    <div className="fixed top-0 left-0 w-full z-50 flex justify-between items-center shadow-md bg-white px-4 md:px-20">
       <div>
         <Link to="/">
           <img src={LOGO_URL} alt="logo" className="w-24 sm:w-32" />

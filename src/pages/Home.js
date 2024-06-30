@@ -1,3 +1,4 @@
+import React from "react";
 import RestaurantCard, {
   withVegLabel,
 } from "../components/Home/RestaurantCard";
@@ -9,12 +10,12 @@ import HomeShimmerUI from "../components/Home/HomeShimmerUI";
 import useHomePage from "../hooks/useHomePage";
 
 const Home = () => {
-  const { myResList, filteredResList } = useRestaurantsList();
-
+  const { myResList } = useRestaurantsList();
   const {
     isFilterOn,
+    filteredResList,
     handleCloseFilter,
-    handleFilter,
+    handleSearchFilter,
     handleFilterTopRatedRestaurants,
   } = useHomePage(myResList);
 
@@ -24,14 +25,14 @@ const Home = () => {
     <HomeShimmerUI />
   ) : (
     <div className="w-9/12 m-auto min-h-screen flex flex-col">
-      <div className="flex m-4 p-4  items-center justify-center mt-24 flex-col sm:flex-row ">
-        <SearchBar handleFilter={handleFilter} />
-        <div className="bg-orange-600  rounded-lg p-4 flex justify-between items-center  ">
+      <div className="flex m-4 p-4 items-center justify-center mt-24 flex-col sm:flex-row">
+        <SearchBar handleFilter={handleSearchFilter} />
+        <div className="bg-orange-600 rounded-lg p-4 flex justify-between items-center mt-4 sm:mt-0">
           <button
             onClick={handleFilterTopRatedRestaurants}
             className="text-white"
           >
-            Top Rated restaurants
+            Top Rated Restaurants
           </button>
           {isFilterOn && (
             <button className="ml-3" onClick={handleCloseFilter}>
@@ -41,7 +42,7 @@ const Home = () => {
         </div>
       </div>
       {filteredResList?.length ? (
-        <div className="flex flex-wrap justify-around m-1  ">
+        <div className="flex flex-wrap justify-around m-1">
           {filteredResList?.map((restaurant) => (
             <Link
               to={`/restaurants/${restaurant.info.id}`}
