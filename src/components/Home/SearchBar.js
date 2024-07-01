@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IoSearchSharp } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
+import { searchBarIconsColor } from "../../utils/constants";
 
 const SearchBar = ({ handleFilter }) => {
   const [searchText, setSearchText] = useState("");
@@ -26,10 +27,18 @@ const SearchBar = ({ handleFilter }) => {
 
       {searchText ? (
         <button onClick={clearInput}>
-          <IoMdClose size={25} color="#777" className="mr-2" />
+          <IoMdClose
+            size={25}
+            color={`${searchBarIconsColor}`}
+            className="mr-2"
+          />
         </button>
       ) : (
-        <IoSearchSharp size={25} color="#777" className="mr-2" />
+        <IoSearchSharp
+          size={25}
+          color={`${searchBarIconsColor}`}
+          className="mr-2"
+        />
       )}
     </div>
   );

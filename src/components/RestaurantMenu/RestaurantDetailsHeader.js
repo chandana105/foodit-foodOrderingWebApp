@@ -1,6 +1,7 @@
 import React from "react";
 import { FaStar } from "react-icons/fa6";
 import { LuDot } from "react-icons/lu";
+import { blackColor, whiteColor } from "../../utils/constants";
 
 const RestaurantDetailsHeader = ({ restaurantInfo }) => {
   const {
@@ -20,7 +21,7 @@ const RestaurantDetailsHeader = ({ restaurantInfo }) => {
         <h1 className="font-bold text-lg text-black">{name}</h1>
         <div className="flex items-center">
           <h2 className="font-semibold text-black text-sm">{sla.slaString}</h2>
-          <LuDot size={25} color="#000" className="-ml-1" />
+          <LuDot size={25} color={`${blackColor}`} className="-ml-1" />
 
           <h2 className="font-semibold text-black text-sm">{areaName}</h2>
         </div>
@@ -33,7 +34,7 @@ const RestaurantDetailsHeader = ({ restaurantInfo }) => {
         <div className="flex items-center ">
           {avgRating ? (
             <div className="flex items-center  bg-green-800 p-1 px-3 rounded-lg gap-1">
-              <FaStar size={15} color="#fff" />
+              <FaStar size={15} color={`${whiteColor}`} />
 
               <h2 className="font-bold text-white ml-1 text-sm  ">
                 {avgRating}
@@ -41,7 +42,6 @@ const RestaurantDetailsHeader = ({ restaurantInfo }) => {
             </div>
           ) : (
             <div className="flex items-center bg-yellow-300 p-1 px-2 rounded-lg">
-              {/* <IconLabel name="label-important" size={25} color="#fa0" /> */}
               <h2 className="font-bold text-black ml-1 h2-sm">
                 {avgRatingString}
               </h2>

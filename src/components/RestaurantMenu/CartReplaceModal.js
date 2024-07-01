@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Modal from "react-modal";
 import { useSelector } from "react-redux";
 import { IoMdCloseCircle } from "react-icons/io";
+import { closeIconColor } from "../../utils/constants";
 
 export default function CartReplaceModal({
   isModalVisible,
@@ -51,7 +52,7 @@ export default function CartReplaceModal({
       <div className="w-full bg-white rounded-xl relative p-5 sm:p-8 md:p-10 ">
         {/* Modal header */}
         <button className="absolute top-5 right-5" onClick={onCancel}>
-          <IoMdCloseCircle size={32} color="#B5B7BA" />
+          <IoMdCloseCircle size={32} color={`${closeIconColor}`} />
         </button>
         {/* Modal body */}
         <div className="text-center">

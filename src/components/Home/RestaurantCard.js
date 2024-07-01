@@ -1,4 +1,4 @@
-import { CDN_URL } from "../../utils/constants";
+import { CDN_URL, blackColor, starRatingIconColor } from "../../utils/constants";
 import { FaStar } from "react-icons/fa6";
 import { LuDot } from "react-icons/lu";
 
@@ -22,10 +22,10 @@ const RestaurantCard = ({ resData }) => {
         <h4 className="font-semibold text-base">{name}</h4>
         <div className="flex items-center font-semibold text-sm">
           <div className="flex items-center gap-1">
-            <FaStar size={15} color="#16a34a" />
+            <FaStar size={15} color={`${starRatingIconColor}`} />
             {avgRating}
           </div>
-          <LuDot size={25} color="#000" className="-ml-1" />
+          <LuDot size={25} color={`${blackColor}`} className="-ml-1" />
           <h4 className="-ml-1">{sla.slaString}</h4>
         </div>
         <h4 className="text-gray-500 truncate text-sm">
@@ -38,8 +38,6 @@ const RestaurantCard = ({ resData }) => {
 };
 
 // HOC
-
-// input = RestaurantCard => RestaurantCardVeg
 
 export const withVegLabel = (RestaurantCard) => {
   return (props) => {

@@ -7,6 +7,7 @@ import CartFooter from "../components/Cart/CartFooter";
 import { BeatLoader } from "react-spinners";
 import CartDeleteModal from "../components/Cart/CartDeleteModal";
 import useCartPage from "../hooks/useCartPage";
+import { orangeIconColor } from "../utils/constants";
 
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
@@ -45,7 +46,7 @@ const Cart = () => {
                 hasMore={hasMore}
                 loader={
                   <div className="flex items-center justify-center mt-2">
-                    <BeatLoader color="#EA580C" />
+                    <BeatLoader color={`${orangeIconColor}`} />
                   </div>
                 }
                 scrollableTarget="scrollableDiv"

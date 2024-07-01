@@ -8,6 +8,7 @@ import SearchBar from "../components/Home/SearchBar";
 import { IoMdCloseCircle } from "react-icons/io";
 import HomeShimmerUI from "../components/Home/HomeShimmerUI";
 import useHomePage from "../hooks/useHomePage";
+import { whiteColor } from "../utils/constants";
 
 const Home = () => {
   const { myResList } = useRestaurantsList();
@@ -36,7 +37,7 @@ const Home = () => {
           </button>
           {isFilterOn && (
             <button className="ml-3" onClick={handleCloseFilter}>
-              <IoMdCloseCircle size={20} color="#fff" />
+              <IoMdCloseCircle size={20} color={`${whiteColor}`} />
             </button>
           )}
         </div>

@@ -4,6 +4,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { BeatLoader } from "react-spinners";
 import { LuChevronDown, LuChevronUp } from "react-icons/lu";
 import useRestaurantCategory from "../../hooks/useRestaurantCategory";
+import { orangeIconColor } from "../../utils/constants";
 
 const RestaurantCategory = ({ category, showMenuItems, handleToggle }) => {
   const {
@@ -47,7 +48,6 @@ const RestaurantCategory = ({ category, showMenuItems, handleToggle }) => {
       {showMenuItems ? (
         <div
           style={{
-            // maxHeight: "calc(100% - 40px)",
             height: "auto",
             overflowY: "auto",
           }}
@@ -59,14 +59,13 @@ const RestaurantCategory = ({ category, showMenuItems, handleToggle }) => {
               hasMore={hasMore}
               loader={
                 <div className="flex items-center justify-center mt-2">
-                  <BeatLoader color="#EA580C" />
+                  <BeatLoader color={`${orangeIconColor}`} />
                 </div>
               }
               endMessage={<></>}
               scrollThreshold={0.9}
               scrollableTarget={scrollableTarget}
             >
-              {/* <MenuListItem itemCards={items} /> */}
               <div className="mt-6">
                 {items.map((item) => (
                   <MenuListItem item={item} key={item.card.info.id} />

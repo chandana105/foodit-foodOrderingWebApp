@@ -6,6 +6,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { BeatLoader } from "react-spinners";
 import RestaurantMenuShimmerUI from "../components/RestaurantMenu/RestaurantMenuShimmerUI";
 import useResMenuListPage from "../hooks/useResMenuListPage";
+import { orangeIconColor } from "../utils/constants";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
@@ -30,7 +31,7 @@ const RestaurantMenu = () => {
           hasMore={hasMore}
           loader={
             <div className="flex items-center justify-center mt-2">
-              <BeatLoader color="#EA580C" />
+              <BeatLoader color={`${orangeIconColor}`} />
             </div>
           }
           endMessage={<></>}

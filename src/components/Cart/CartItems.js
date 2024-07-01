@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { CDN_URL } from "../../utils/constants";
+import { CDN_URL, imageNotSupportedColor } from "../../utils/constants";
 import { useDispatch } from "react-redux";
 import { decrementQuantity, incrementQuantity } from "../../store/cartSlice";
 import { MdImageNotSupported } from "react-icons/md";
@@ -32,7 +32,10 @@ const CartItems = ({ item }) => {
           />
         ) : (
           <div className="shadow-lg bg-white rounded-full w-10 h-10 flex items-center justify-center">
-            <MdImageNotSupported size={25} color="#040" />
+            <MdImageNotSupported
+              size={25}
+              color={`${imageNotSupportedColor}`}
+            />
           </div>
         )}
 
@@ -49,7 +52,7 @@ const CartItems = ({ item }) => {
           <button className="px-2" onClick={handleIncrement}>
             <div className="text-green-600 text-lg uppercase font-bold">+</div>
           </button>
-        </div>    
+        </div>
         <div className="ml-auto text-right pr-1">
           <h3 className="text-black text-base font-semibold">
             ₹

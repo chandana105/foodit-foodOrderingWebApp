@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Modal from "react-modal";
 import { useSelector } from "react-redux";
 import { IoMdCloseCircle } from "react-icons/io";
+import { closeIconColor } from "../../utils/constants";
 
 export default function CartDeleteModal({
   isModalVisible,
@@ -49,7 +50,7 @@ export default function CartDeleteModal({
     >
       <div className="w-full bg-white rounded-xl relative p-5 sm:p-8 md:p-10 ">
         <button className="absolute top-5 right-5" onClick={onCancel}>
-          <IoMdCloseCircle size={32} color="#B5B7BA" />
+          <IoMdCloseCircle size={32} color={`${closeIconColor}`} />
         </button>
         {/* Modal body */}
         <div className="text-center">
@@ -82,90 +83,3 @@ export default function CartDeleteModal({
     </Modal>
   );
 }
-
-// import React, { useEffect } from "react";
-// import Modal from "react-modal";
-// import { useSelector } from "react-redux";
-// import { IoMdCloseCircle } from "react-icons/io";
-
-// export default function CartDeleteModal({
-//   isModalVisible,
-//   onCancel,
-//   onConfirm,
-// }) {
-//   const cart = useSelector((state) => state?.cart);
-
-//   const customStyles = {
-//     content: {
-//       width: "70%",
-//       maxWidth: "40%",
-//       height: "30%",
-//       top: "50%",
-//       left: "50%",
-//       right: "auto",
-//       bottom: "auto",
-//       marginRight: "-50%",
-//       transform: "translate(-50%, -50%)",
-//       display: "flex",
-//       flexDirection: "column",
-//       justifyContent: "center",
-//       alignItems: "center",
-//       borderRadius: "15px",
-//       padding: "20px",
-//       boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-//       position: "relative",
-//     },
-//     overlay: {
-//       backgroundColor: "rgba(0, 0, 0, 0.5)",
-//     },
-//   };
-
-//   useEffect(() => {
-//     if (isModalVisible) {
-//       document.body.style.overflow = "hidden";
-//     } else {
-//       document.body.style.overflow = "auto";
-//     }
-//   }, [isModalVisible]);
-
-//   return (
-//     <Modal
-//       isOpen={isModalVisible}
-//       onRequestClose={onCancel}
-//       style={customStyles}
-//     >
-//       <div className="w-full bg-white rounded-xl relative  ">
-//         <button className="absolute top-2 right-2" onClick={onCancel}>
-//           <IoMdCloseCircle size={32} color="#B5B7BA" className="sm:w-7" />
-//         </button>
-//         {/* Modal body */}
-//         <div className="p-5 text-center">
-//           <p className="text-black font-bold text-xl mb-4 sm:text-lg md:text-xl">
-//             Clear cart?
-//           </p>
-//           <p className="text-gray-600 text-lg leading-6 text-justify sm:text-base">
-//             Are you sure you want to clear your cart from {cart?.restaurantName}
-//             ?
-//           </p>
-//         </div>
-//         {/* Modal footer */}
-//         <div className="flex justify-center mt-4 pb-4 gap-10 sm:gap-3">
-//           <button
-//             className="px-12 py-2 bg-red-50 rounded-lg shadow-sm sm:px-6"
-//             onClick={onCancel}
-//           >
-//             <h2 className="text-orange-600 text-lg font-bold sm:text-base">
-//               No
-//             </h2>
-//           </button>
-//           <button
-//             className="px-12 py-2 bg-orange-600 rounded-lg shadow-sm sm:px-6"
-//             onClick={onConfirm}
-//           >
-//             <h2 className="text-white text-lg font-bold sm:text-base">Yes</h2>
-//           </button>
-//         </div>
-//       </div>
-//     </Modal>
-//   );
-// }
