@@ -26,7 +26,6 @@ export default function CartReplaceModal({
       alignItems: "center",
       borderRadius: "15px",
       padding: "20px",
-      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
       position: "relative",
     },
     overlay: {

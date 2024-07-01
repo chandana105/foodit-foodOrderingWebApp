@@ -16,18 +16,10 @@ const CartFooter = () => {
         <h2 className="text-gray-400">₹20.00</h2>
       </div>
 
-      <div className="flex justify-between">
-        <h1 className="text-black">Order Total</h1>
-        <h1 className="text-black font-extrabold">
-          ₹{cart.orderTotal.toFixed(2)}
-        </h1>
+      <div className="flex justify-center items-center rounded-lg bg-green-600 p-4 gap-4 text-lg">
+        <h1 className="text-white font-bold">Order Total : </h1>
+        <h1 className="text-white font-bold">₹{cart.orderTotal.toFixed(2)}</h1>
       </div>
-
-      <button className="rounded-lg bg-green-600 p-4 w-full">
-        <h1 className="text-center text-white text-lg font-bold">
-          Place Order
-        </h1>
-      </button>
     </div>
   );
 };
