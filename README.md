@@ -1,12 +1,12 @@
-# FOOD ORDERING WEB APPLICATION / SWIGGY CLONE
+# FOODit - FOOD ORDERING WEB APPLICATION  
 
-A comprehensive web application for food ordering, inspired by Swiggy.
+FoodIt is a food ordering web application, showcasing restaurant listings, interactive menus, and seamless cart management. It harnesses the power of Reactjs, Redux Toolkit, TailwindCSS and React Router for smooth navigation between different sections ensuring a responsive design and peak performance through Parcel and Babel.
 
-- Live demo : [FoodOrderingWebApplication]
+- Live demo: [fooditnow](https://fooditnow.netlify.app/)
 
 ## Tech Stack
 - Frontend
-   - React: JavaScript library for building user interfaces.
+   - Reactjs: JavaScript library for building user interfaces.
    - Redux Toolkit: State management library for handling application state.
    - React Infinite Scroll Component: Infinite scrolling functionality for React.
    - React Router DOM: Declarative routing for React applications.
@@ -42,6 +42,7 @@ A comprehensive web application for food ordering, inspired by Swiggy.
 
 
 ### Screenshots of app
+
 
 
 
