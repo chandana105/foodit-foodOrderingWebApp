@@ -22,7 +22,7 @@ FoodIt is a food ordering web application, showcasing restaurant listings, inter
    - Visual Studio Code: Code editor redefined and optimized for building and debugging modern web and cloud applications.
 
 ## Features
-- Restaurants Listing Page : A page displaying all the fetched restaurants from the API, differentiating between veg and non-veg restaurants.
+- Restaurants Listing Page : A page displaying all the fetched restaurants from the API, differentiating between veg and non-veg restaurants using the concept of Higher Order Component (HOC).
 - Search Filter: Enables searching for restaurants based on name.
 - Top Rated Restaurant Filter: Filter to show top-rated restaurants.
 - Restaurant Menu Page :-
@@ -55,5 +55,6 @@ FoodIt is a food ordering web application, showcasing restaurant listings, inter
 
 
 
-
+TODO:- CHANGE HEADINGS OF FEATURES PAGE HERE 
+- 
 
