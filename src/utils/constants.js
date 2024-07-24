@@ -1,11 +1,6 @@
 export const CDN_URL =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
-// export const MENU_API_START_URL =
-//   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=31.33103899100404&lng=75.57223644107582&restaurantId=";
-
-// export const MENU_API_END_URL = "&catalog_qa=undefined";
-
 export const RESTAURANTS_LIST_URL = `${process.env.REACT_APP_API_BASE_URL}/restaurants`;
 
 export const MENU_LIST_URL = `${process.env.REACT_APP_API_BASE_URL}/restaurantMenu/`; //resid add
