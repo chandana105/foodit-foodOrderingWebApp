@@ -43,18 +43,14 @@ FoodIt is a food ordering web application, showcasing restaurant listings, inter
 
 ### Screenshots of app
 
-<img width="1512" alt="Screenshot 2024-07-01 at 7 22 59 PM" src="https://github.com/chandana105/foodOrderingWebApp/assets/39641650/877ecd1a-a6fd-4ba0-a34d-2e976df71c17">
-<img width="1512" alt="Screenshot 2024-07-01 at 7 23 33 PM" src="https://github.com/chandana105/foodOrderingWebApp/assets/39641650/3c784391-6e13-4238-acaa-ed33ac36654c">
-
-<img width="1512" alt="Screenshot 2024-07-01 at 7 23 45 PM" src="https://github.com/chandana105/foodOrderingWebApp/assets/39641650/05b74ec5-dd26-4526-a576-7856ded3af04">
-<img width="1512" alt="Screenshot 2024-07-01 at 7 23 57 PM" src="https://github.com/chandana105/foodOrderingWebApp/assets/39641650/d502f558-52e2-4ca6-a120-dac19dd32865">
-<img width="1512" alt="Screenshot 2024-07-01 at 7 24 11 PM" src="https://github.com/chandana105/foodOrderingWebApp/assets/39641650/e4cc4110-98ad-4d25-8bfc-5b69778180ef">
-
+<img width="490" alt="Screenshot 2024-07-01 at 7 22 59 PM" src="https://github.com/chandana105/foodOrderingWebApp/assets/39641650/877ecd1a-a6fd-4ba0-a34d-2e976df71c17"> &nbsp; 
+<img width="490" alt="Screenshot 2024-07-01 at 7 23 33 PM" src="https://github.com/chandana105/foodOrderingWebApp/assets/39641650/3c784391-6e13-4238-acaa-ed33ac36654c"> &nbsp; 
+<img width="490" alt="Screenshot 2024-07-01 at 7 23 45 PM" src="https://github.com/chandana105/foodOrderingWebApp/assets/39641650/05b74ec5-dd26-4526-a576-7856ded3af04"> &nbsp;
+<img width="490" alt="Screenshot 2024-07-01 at 7 23 57 PM" src="https://github.com/chandana105/foodOrderingWebApp/assets/39641650/d502f558-52e2-4ca6-a120-dac19dd32865"> &nbsp;
+<img width="490" alt="Screenshot 2024-07-01 at 7 24 11 PM" src="https://github.com/chandana105/foodOrderingWebApp/assets/39641650/e4cc4110-98ad-4d25-8bfc-5b69778180ef"> &nbsp; 
 
 
 
 
 
-TODO:- CHANGE HEADINGS OF FEATURES PAGE HERE 
-- 
 
