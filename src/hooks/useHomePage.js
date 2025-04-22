@@ -7,6 +7,7 @@ const useHomePage = (myResList) => {
 
   const handleSearchFilter = (text) => {
     if (text) {
+      setIsFilterOn(false);
       const filteredRestaurants = myResList.filter((res) =>
         res.info.name.toLowerCase().includes(text.toLowerCase())
       );

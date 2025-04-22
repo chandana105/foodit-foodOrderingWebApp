@@ -38,8 +38,9 @@ const useResMenuListPage = ({ resId, resInfo }) => {
           category?.card?.card?.["@type"] ===
           "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
       );
-
+    
     const newCategories = allCategories.slice((page - 1) * 10, page * 10);
+    
     if (newCategories.length > 0) {
       setCategories((prev) => [...prev, ...newCategories]);
       setOpenCategories((prev) => [
@@ -50,6 +51,7 @@ const useResMenuListPage = ({ resId, resInfo }) => {
       setHasMore(false);
     }
   };
+
 
   const handleToggle = (index) => {
     setOpenCategories((prev) =>
